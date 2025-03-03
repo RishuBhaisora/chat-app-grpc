@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package chat;
+
+service ChatService {
+  // Send a message
+  rpc SendMessage (Message) returns (MessageResponse) {}
+  
+  // Stream messages for a user
+  rpc StreamMessages (StreamRequest) returns (stream Message) {}
+  
+  // Stream user status updates
+  rpc StreamUserStatus (StreamRequest) returns (stream UserStatus) {}
+}
+
+message Message {
+  string id = 1;
+  string from = 2;
+  string content = 3;
+  int64 timestamp = 4;
+}
+
+message MessageResponse {
+  bool success = 1;
+  string messageId = 2;
+  string error = 3;
+}
+
+message StreamRequest {
+  string userId = 1;
+}
+
+message UserStatus {
+  string userId = 1;
+  bool online = 2;
+  int64 lastSeen = 3;
+} 
