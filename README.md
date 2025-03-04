@@ -7,7 +7,7 @@ Shared gRPC service definitions for the chat application.
 1. Add to your backend/frontend project:
 
 ```bash
-git submodule add https://github.com/yourusername/chat-app-grpc.git backend/proto
+git submodule add git@github.com:RishuBhaisora/chat-app-grpc.git proto
 ```
 
 2. Initialize and update submodules:
