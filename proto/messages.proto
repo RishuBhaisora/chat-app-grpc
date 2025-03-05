@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package messages;
+
+// A generic response message
+message Response {
+  bool success = 1;
+  string message = 2;
+}

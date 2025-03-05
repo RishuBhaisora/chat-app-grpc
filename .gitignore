@@ -1,0 +1,17 @@
+# Editor files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Optional - keep if you plan to use these
+node_modules/
+dist/
+build/
